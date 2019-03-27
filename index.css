@@ -1,0 +1,28 @@
+body {
+	margin: 0;
+	padding: 10px;
+
+}
+
+article {
+	width: 250px;
+	/*padding: 5px;*/
+	outline: 1px dashed red;
+	display: inline-block;
+	vertical-align: middle;
+
+}
+
+p {
+width: 100%
+margin:0;
+outline: 1px dashed red;
+
+
+
+}
+
+img {
+	width: 100%;
+}
+/**/
