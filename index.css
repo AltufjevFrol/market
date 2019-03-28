@@ -1,19 +1,33 @@
-body {
-	margin: 0;
-	padding: 5px 5px;
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&subset=cyrillic');
+@media (min-width: 700px) and (max-width: 1000px){
+div.main{width: 490px;}
 }
 
+body {
+	margin: 0;
+	padding: 10px;
+	font-family: 'Arimo', sans-serif;
+	
+}
 
+div.main {
+	margin-left: auto;
+	margin-right: auto;
+	outline: 1px dashed red;
+	
+}
 
 article {
-	width: 250px;	
+	width: 200px;	
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
 	/*outline: 1px dashed red;*/
 	margin-top: 300px;
-	margin-left: 2%;
-	margin-right: 2%;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-size: 10px;
+	
 }
 
 img {	
@@ -25,6 +39,10 @@ div.img {
 	position: absolute;
 	bottom:100%;
 	/*outline: 1px dashed blue;*/
+}
+
+div a {
+
 }
 
 a {
