@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&subset=cyrillic');
 @media (min-width: 500px) and (max-width: 750px){
-div.main{width: 500px;}
+div.main{width: 470px;}
 }
 @media (min-width: 750px) and (max-width: 1000px){
-div.main{width: 750px;}
+div.main{width: 730px;}
 }
 @media (min-width: 1000px) and (max-width: 1250px){
-div.main{width: 1000px;}
+div.main{width: 980px;}
 }
 @media (min-width: 1250px) and (max-width: 1500px){
-div.main{width: 1250px;}
+div.main{width: 1220px;}
 }
 @media (min-width: 1500px){
-div.main{width: 1500px;}
+div.main{width: 1470px;}
 }
 
 body {
@@ -27,16 +27,17 @@ div.main {
 	margin-left: auto;
 	margin-right: auto;
 	min-width: 500px;
-	/*outline: 1px dashed blue;*/
+	outline: 1px dashed blue;
 }
 
 article {
+	box-sizing: border-box;
 	width: 200px;	
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
 	/*outline: 1px dashed red;*/
-	margin-top: 300px;
+	margin-top: 250px;
 	margin-left: 20px;
 	margin-right: 20px;
 	font-size: 10px;
@@ -114,6 +115,7 @@ div.category {
 }
 
 /*рейтинг*/
+
 /*sprite with stars*/
 .reviewStars input:checked ~ label, .reviewStars label, .reviewStars label:hover, .reviewStars label:hover ~ label {
   background: url('img/stars.png') no-repeat;
@@ -121,64 +123,56 @@ div.category {
 }
 
 .reviewStars {
-  
-  /*fix floating problems*/
-  overflow: hidden;
-  *zoom: 1;
-  /*end of fix floating problems*/
-  
-  position: relative;
-  float: left;
+height: 25px;
+position: relative;
+padding-right: 57px;
 }
 
 .reviewStars input {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  
-  width: 20px;
-  height: 20px;
-  
-  position: absolute;
-  top: 0;
-  z-index: 0;
+opacity: 0;
+width: 20px;
+height: 20px;
+position: absolute;
+top: 0%;
+z-index: 0;
 }
 
 .reviewStars input:checked ~ label {
-  background-position: 0 -20px;
-  height: 20px;
-  width: 20px;
+background-position: 0 -18px;
+height: 20px;
+width: 22px;
 }
 
 .reviewStars label {
-  background-position: 0 0;
-  height: 20px;
-  width: 20px;
-  float: right;
-  cursor: pointer;
-  margin-right: 5px;
-  
-  position: relative;
-  z-index: 1;
+background-position: 0 0px;
+height: 20px;
+width: 22px;
+float: right;
+cursor: pointer;
+margin-top: 3px;
+margin-left: 5px;
+position: relative;
+z-index: 1;
 }
 
 .reviewStars label:hover, .reviewStars label:hover ~ label {
-  background-position: 0 -20px;
-  height: 20px;
-  width: 20px;
+background-position: 0 -18px;
+height: 20px;
+width: 22px;
 }
 
-#star-1 {
-  left: 0px;
+input.s1 {
+left: 0px;
 }
-#star-2 {
-  left: 25px;
+input.s2 {
+left: 28px;
 }
-#star-3 {
-  left: 50px;
+input.s3 {
+left: 55px;
 }
-#star-4 {
-  left: 75px;
+input.s4 {
+left: 82px;
 }
-#star-5 {
-  left: 100px;
+input.s5 {
+left: 109px;
 }
