@@ -19,7 +19,7 @@ body {
 	margin: 0;
 	padding: 10px;
 	font-family: 'Arimo', sans-serif;
-	background: #6AF5EC38;
+	
 	
 }
 
@@ -27,7 +27,6 @@ div.main {
 	margin-left: auto;
 	margin-right: auto;
 	min-width: 500px;
-	outline: 1px dashed blue;
 }
 
 article {
@@ -42,12 +41,6 @@ article {
 	margin-right: 20px;
 	font-size: 10px;
 	padding: 3px;
-	border-bottom:1px solid #C6C7E5A8 ;
-	border-left:1px solid #C6C7E5A8 ;
-	border-right:1px solid #C6C7E5A8 ;
-	background: #62D9D138
-
-	
 }
 
 img {
@@ -57,22 +50,7 @@ img {
 	bottom:100%;
 	left: -1px;
 	/*outline: 1px dashed blue;*/
-	border-top:1px solid #C6C7E5A8 ;
-	border-left:1px solid #C6C7E5A8 ;
-	border-right:1px solid #C6C7E5A8 ;
 }
-
-/*div.img {
-	width: 100%;
-	position: absolute;
-	bottom:100%;
-	left: 0;
-	
-	border-top:1px solid #C6C7E5A8 ;
-	border-left:1px solid #C6C7E5A8 ;
-	border-right:1px solid #C6C7E5A8 ;
-}*/
-
 
 
 a {
@@ -87,10 +65,11 @@ a {
 }
 
 
-a:hover {
+a:hover,
+img:hover + div a {
 	color: red;
 }
-article:hover div.img img {
+article:hover img {
 	opacity: 0.7;
 }
 
@@ -100,6 +79,7 @@ div.prise {
 }
 span.now {
 	font-weight: 700;
+	color: #D93925FF;
 }
 span.befor {
 	text-decoration: line-through;
@@ -117,7 +97,10 @@ div.category {
 /*рейтинг*/
 
 /*sprite with stars*/
-.reviewStars input:checked ~ label, .reviewStars label, .reviewStars label:hover, .reviewStars label:hover ~ label {
+.reviewStars input:checked ~ label,
+.reviewStars label,
+.reviewStars label:hover,
+.reviewStars label:hover ~ label {
   background: url('img/stars.png') no-repeat;
   background-size: 20px;
 }
@@ -144,7 +127,7 @@ width: 22px;
 }
 
 .reviewStars label {
-background-position: 0 0px;
+background-position: 0 2px;
 height: 20px;
 width: 22px;
 float: right;
@@ -155,7 +138,8 @@ position: relative;
 z-index: 1;
 }
 
-.reviewStars label:hover, .reviewStars label:hover ~ label {
+.reviewStars label:hover,
+.reviewStars label:hover ~ label {
 background-position: 0 -18px;
 height: 20px;
 width: 22px;
@@ -175,4 +159,109 @@ left: 82px;
 }
 input.s5 {
 left: 109px;
+}
+
+/*list*/
+.wrap_switch {
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+	background:#C6C6C6FF;
+	border-radius: 10px;
+	position: relative;
+}
+.switch {
+	width: 20px;
+	height: 20px;
+	background:#FFEF00FF;
+	border-radius: 10px;
+	position: absolute;
+	left: 2px;
+}
+#list:checked ~ .wrap_switch .switch {
+	left: auto;
+	right:2px;
+}
+
+label.list {
+	height: 20px;
+	width: 50px;
+	display: block;
+	position:absolute;
+	z-index: 2;
+}
+
+#list {
+	display: none;
+}
+.title {
+	display: inline-block;
+}
+
+
+/*list*/
+#list:checked ~ .main article {
+display: block;
+position: relative;
+width: 90%;
+margin: 30px 0 30px 0;
+height: 250px;
+overflow: hidden;
+}
+/*list*/
+#list:checked ~ .main img {
+display: block;
+position: absolute;
+width: 25%;
+top: 0;
+left:0;
+
+}
+/*list*/
+#list:checked ~ .main .ref {
+position: absolute;
+left: 30%;
+top: 0;
+width: 35%;
+
+}
+/*list*/
+#list:checked ~ .main .prise {
+position: absolute;
+left: 30%;
+top: 30%;
+width: 35%;
+
+}
+/*list*/
+#list:checked ~ .main .category {
+position: absolute;
+left: 30%;
+top: 10%;
+width: 35%;
+}
+/*list*/
+#list:checked ~ .main .description {
+position: absolute;
+right: 0;
+top: 0;
+width: 30%;
+overflow: hidden;
+text-overflow: ellipsis;
+font-size: 120%;
+}
+/*list*/
+#list:checked ~ .main .reviewStars{
+position: absolute;
+left: 30%;
+top: 20%;
+padding-right: 0;
+margin-left: 0;
+width: 135px;
+
+}
+/*list*/
+#list:checked ~ .main label{
+	margin-right: 5px;
+	margin-left: 0;
 }
